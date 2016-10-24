@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="Curiosity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-u7-WsN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.2666666667" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZk-VV-d8F">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1a9-VH-VAF"/>
+                                    <constraint firstAttribute="width" constant="50" id="rpi-ex-uSI"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Circled Down 2 Filled-100"/>
+                                <connections>
+                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SL0-IG-9hf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-VO-KMa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4Tl-o5-Qro"/>
+                                    <constraint firstAttribute="height" constant="50" id="b3e-bh-K2q"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Circled Up 2 Filled-100"/>
+                                <connections>
+                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="7uS-Zk-fXL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-KM-Cm2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IkT-yt-BOI"/>
+                                    <constraint firstAttribute="height" constant="50" id="KE4-iG-Bs8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="mAC-f5-A20"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="y5Z-3V-CXy"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Circled Up 2 Filled-100"/>
+                                <connections>
+                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="pFb-cX-hht"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7N-Jv-EEm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5wC-qN-dEb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="V8Y-ZG-Nbk"/>
+                                    <constraint firstAttribute="height" constant="50" id="eSW-nt-Uvt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="fs5-PE-pdV"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Circled Down 2 Filled-100"/>
+                                <connections>
+                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="MCh-4x-wiV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KR6-KM-Cm2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="K7q-e7-hYw"/>
+                            <constraint firstItem="ClI-VO-KMa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="SCa-6l-vVb"/>
+                            <constraint firstAttribute="trailing" secondItem="KR6-KM-Cm2" secondAttribute="trailing" constant="25" id="V3m-0j-vym"/>
+                            <constraint firstItem="h7N-Jv-EEm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="Z2E-Ku-uD3"/>
+                            <constraint firstItem="FZk-VV-d8F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="cpe-sp-zsv"/>
+                            <constraint firstAttribute="trailing" secondItem="h7N-Jv-EEm" secondAttribute="trailing" constant="25" id="fnR-fi-oiT"/>
+                            <constraint firstItem="ClI-VO-KMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="jAu-Ud-qeL"/>
+                            <constraint firstItem="MUT-u7-WsN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="je4-O3-3Ol"/>
+                            <constraint firstItem="MUT-u7-WsN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="njL-En-ciw"/>
+                            <constraint firstItem="FZk-VV-d8F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="p7G-3G-ifs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftDown" destination="FZk-VV-d8F" id="siR-yQ-6Nl"/>
+                        <outlet property="leftUp" destination="ClI-VO-KMa" id="GaY-OJ-smZ"/>
+                        <outlet property="rightDown" destination="h7N-Jv-EEm" id="I2e-2a-umv"/>
+                        <outlet property="rightUp" destination="KR6-KM-Cm2" id="5fv-dW-day"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="120.08995502248877"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V1l-Pe-Tk4">
+            <objects>
+                <viewController id="8ni-hT-ZNT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j2t-el-YHI"/>
+                        <viewControllerLayoutGuide type="bottom" id="t5R-sP-0YO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aeu-DV-s9s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezk-Qp-Kj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Circled Down 2 Filled-100" width="100" height="100"/>
+        <image name="Circled Up 2 Filled-100" width="100" height="100"/>
+    </resources>
+    <color key="tintColor" red="0.75686274509803919" green="0.26666666666666666" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+</document>
