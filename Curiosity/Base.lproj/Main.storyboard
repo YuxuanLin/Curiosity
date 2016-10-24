@@ -30,7 +30,10 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Down 2 Filled-100"/>
                                 <connections>
-                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SL0-IG-9hf"/>
+                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="2kk-Vq-NHP"/>
+                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="cHa-Fu-iCG"/>
+                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHA-yS-rT1"/>
+                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchDown" id="vIx-Gb-EGF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-VO-KMa">
@@ -40,7 +43,10 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Up 2 Filled-100"/>
                                 <connections>
-                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="7uS-Zk-fXL"/>
+                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="1in-hz-8U8"/>
+                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSo-aF-jFS"/>
+                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchDown" id="eYI-qe-1cr"/>
+                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="uGP-yT-C1V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-KM-Cm2">
@@ -52,7 +58,10 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Up 2 Filled-100"/>
                                 <connections>
-                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="pFb-cX-hht"/>
+                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchDown" id="2VR-z3-K9P"/>
+                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="cOi-T6-8aC"/>
+                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWG-lN-dEd"/>
+                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="ons-83-CbT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7N-Jv-EEm">
@@ -64,7 +73,11 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Down 2 Filled-100"/>
                                 <connections>
+                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDragInside" id="5t2-iG-D6k"/>
+                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDown" id="81E-Dx-zly"/>
+                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="Fvo-xg-4tf"/>
                                     <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="MCh-4x-wiV"/>
+                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="kIP-5C-J29"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,24 +105,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="120.08995502248877"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="V1l-Pe-Tk4">
-            <objects>
-                <viewController id="8ni-hT-ZNT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j2t-el-YHI"/>
-                        <viewControllerLayoutGuide type="bottom" id="t5R-sP-0YO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aeu-DV-s9s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ezk-Qp-Kj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1011" y="113"/>
         </scene>
     </scenes>
     <resources>

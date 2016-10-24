@@ -1,0 +1,6 @@
+framework module Pods_Curiosity {
+  umbrella header "Pods-Curiosity-umbrella.h"
+
+  export *
+  module * { export * }
+}

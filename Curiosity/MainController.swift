@@ -30,31 +30,9 @@ class MainController: UIViewController {
     }
     
     let service = GoPiGoService()
-    var taskId = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesMoved(touches, with: event)
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        service.stop()
-        didTouch(touches: touches)
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        service.stop()
-    }
-    
-    
-    func didTouch(touches: Set<UITouch>) {
-        //   service.recursiveMove()
-    }
-
     
 }
