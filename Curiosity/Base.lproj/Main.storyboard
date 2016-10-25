@@ -15,10 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-u7-WsN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-u7-WsN">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.75686274509999996" green="0.2666666667" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -30,10 +30,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Down 2 Filled-100"/>
                                 <connections>
-                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="2kk-Vq-NHP"/>
-                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="cHa-Fu-iCG"/>
-                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHA-yS-rT1"/>
-                                    <action selector="leftDownAction:" destination="BYZ-38-t0r" eventType="touchDown" id="vIx-Gb-EGF"/>
+                                    <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="8XB-Jl-CYv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-VO-KMa">
@@ -43,10 +40,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Up 2 Filled-100"/>
                                 <connections>
-                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="1in-hz-8U8"/>
-                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSo-aF-jFS"/>
-                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchDown" id="eYI-qe-1cr"/>
-                                    <action selector="leftUpAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="uGP-yT-C1V"/>
+                                    <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="eXF-Y2-4Ga"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-KM-Cm2">
@@ -58,10 +52,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Up 2 Filled-100"/>
                                 <connections>
-                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchDown" id="2VR-z3-K9P"/>
-                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="cOi-T6-8aC"/>
-                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWG-lN-dEd"/>
-                                    <action selector="rightUpAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="ons-83-CbT"/>
+                                    <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="7YY-lV-ttf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7N-Jv-EEm">
@@ -73,11 +64,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Circled Down 2 Filled-100"/>
                                 <connections>
-                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDragInside" id="5t2-iG-D6k"/>
-                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDown" id="81E-Dx-zly"/>
-                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="Fvo-xg-4tf"/>
-                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="MCh-4x-wiV"/>
-                                    <action selector="rightDownAction:" destination="BYZ-38-t0r" eventType="touchDragExit" id="kIP-5C-J29"/>
+                                    <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="Wa7-V9-CK6"/>
                                 </connections>
                             </button>
                         </subviews>

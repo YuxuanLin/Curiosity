@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class MainController: UIViewController {
     
@@ -14,25 +15,21 @@ class MainController: UIViewController {
     @IBOutlet var leftDown: UIButton!
     @IBOutlet var rightUp: UIButton!
     @IBOutlet var rightDown: UIButton!
-
-    // Buttons pressed
-    @IBAction func leftUpAction(_ sender: AnyObject) {
-        buttonPressed()
-    }
-    @IBAction func leftDownAction(_ sender: AnyObject) {
-        buttonPressed()
-    }
-    @IBAction func rightUpAction(_ sender: AnyObject) {
-        buttonPressed()
-    }
-    @IBAction func rightDownAction(_ sender: AnyObject) {
-        buttonPressed()
-    }
     
+    // network service
     let service = GoPiGoService()
+    
+    // gravity
+    let motionManager = CMMotionManager()    
+    // Buttons pressed
+    @IBAction func controlButtonChanged(_ sender: UIButton) {
+        // buttonPressed()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        monitorControlButtons()
+        motionManager.startDeviceMotionUpdates()
     }
     
 }
