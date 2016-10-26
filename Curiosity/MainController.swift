@@ -16,6 +16,16 @@ class MainController: UIViewController {
     @IBOutlet var rightUp: UIButton!
     @IBOutlet var rightDown: UIButton!
     
+    @IBOutlet var speak: UIButton!
+    
+    @IBAction func speaking(_ sender: AnyObject) {
+        speakButtonPressed()
+    }
+    
+    @IBAction func stopCar(_ sender: UIButton) {
+        service.stop()
+    }
+    
     // network service
     let service = GoPiGoService()
     

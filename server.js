@@ -18,7 +18,6 @@ setInterval(function() {
   timer = timer - 1;
   if (timer == 0) {
     handleAnswer("x");
-    console.log("from timer");
   }
 }, 1);
 
@@ -31,6 +30,16 @@ app.get('/moveContinuous', function(req, res){
   handleAnswer(req.query.action);
 });
 
+// Step move
+app.get('/moveWithSteps', function(req, res){
+  res.send('done');
+  timer = 10000;
+  robot.motion.setSpeed(200);
+  robot.encoders.targeting(1, 1, req.query.steps)
+  handleAnswer(req.query.action);
+  console.log(req.query.steps);
+});
+
 app.get('/stop', function(req, res){
   timer = 1;
   console.log("from /stop");
@@ -40,11 +49,7 @@ app.get('/stop', function(req, res){
 // Control gopigo car move with steps. 
 // n1=1 n2=0 n3=15 act = d --> turn left for 90 degree
 // n1=0 n2=1 n3=15 act = a --> turn right for 90 degree
-app.get('/moveWithSteps', function(req, res){
-  robot.encoders.targeting( req.query.leftMotor, req.query.rightMotor, req.query.stepCount);
-  handleAnswer(req.query.action);
-  res.send('done');
-});
+
 
 robot = new Robot({
   minVoltage: 5.5,
@@ -226,7 +231,6 @@ function handleAnswer(answer) {
     break
     case 'rotate left':
     case 'n':
-   robot.encoders.targeting(1, 1, 15)
       var res = robot.motion.leftWithRotation()
       console.log('Rotating left::' + res)
     break
@@ -256,9 +260,9 @@ function handleAnswer(answer) {
 };
 
 var options = {
-  host: 'www.google.com',
-  port: 443,
-  path: '/index.html'
+  host: 'www.monash.edu.au',
+  port: 80,
+  path: '/'
 };
 
 setInterval(function() {

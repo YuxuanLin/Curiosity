@@ -12,10 +12,11 @@ import Alamofire
 
 class GoPiGoService: NSObject {
     
-    // n1=1&n2=1&n3=1&act=w
-    let url = "http://118.138.27.75:8000/"
+    // Car server
+    let url = "http://118.139.1.3:8000/"
     var request: DataRequest?
     
+    // Stop car
     func stop() {
         request = Alamofire.request(url + "stop").response(completionHandler: { (_) in
             self.request = nil
@@ -26,6 +27,15 @@ class GoPiGoService: NSObject {
         if (request == nil) {
             let prameters = ["action": action, "leftSpeed": leftSpeed, "rightSpeed": rightSpeed] as [String : Any]
             request = Alamofire.request(url + "moveContinuous", parameters: prameters).response(completionHandler: { (_) in
+                self.request = nil
+            })
+        }
+    }
+    
+    func moveWithSteps(action: String, steps: Int) {
+        if (request == nil) {
+            let prameters = ["action": action, "steps": steps] as [String : Any]
+            request = Alamofire.request(url + "moveWithSteps", parameters: prameters).response(completionHandler: { (_) in
                 self.request = nil
             })
         }

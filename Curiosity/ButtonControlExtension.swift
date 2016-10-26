@@ -23,9 +23,6 @@ extension MainController {
                     leftSpeed = leftSpeed + Int(tilt * 50)
                     rightSpeed = rightSpeed - Int(tilt * 50)
                 }
-                print(leftSpeed)
-                print(rightSpeed)
-                print("================")
                 
                 if (self.leftUp.state == .highlighted && self.rightUp.state == .highlighted) {
                     self.service.moveContinuous(action: "move forward", leftSpeed: leftSpeed, rightSpeed: rightSpeed)

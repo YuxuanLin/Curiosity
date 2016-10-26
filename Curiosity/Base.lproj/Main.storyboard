@@ -33,6 +33,19 @@
                                     <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="8XB-Jl-CYv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbI-ev-vwf">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Ut7-xo-FvR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fGe-ON-jCv"/>
+                                    <constraint firstAttribute="width" constant="50" id="ifp-zd-Lch"/>
+                                    <constraint firstAttribute="height" constant="50" id="kTa-hg-0Rs"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Cancel Filled-100"/>
+                                <connections>
+                                    <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="d06-mb-DIz"/>
+                                    <action selector="stopCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngH-IZ-bNl"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-VO-KMa">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4Tl-o5-Qro"/>
@@ -67,13 +80,32 @@
                                     <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="Wa7-V9-CK6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-IO-EBq">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Lnh-dB-AqF"/>
+                                    <constraint firstAttribute="width" constant="50" id="SBX-9E-SwQ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="UVg-Le-LKG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="WLE-qM-JIV"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="j9j-rZ-MWm"/>
+                                    <constraint firstAttribute="height" constant="50" id="rZ2-QN-aCN"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Microphone Filled-100"/>
+                                <connections>
+                                    <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="aFD-x7-148"/>
+                                    <action selector="speaking:" destination="BYZ-38-t0r" eventType="touchDown" id="L3n-m2-cQ4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2lV-IO-EBq" secondAttribute="trailing" constant="25" id="INc-5f-S39"/>
                             <constraint firstItem="KR6-KM-Cm2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="K7q-e7-hYw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dbI-ev-vwf" secondAttribute="bottom" constant="25" id="Krc-5U-Bcx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2lV-IO-EBq" secondAttribute="bottom" constant="25" id="R3b-bH-sqe"/>
                             <constraint firstItem="ClI-VO-KMa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="SCa-6l-vVb"/>
                             <constraint firstAttribute="trailing" secondItem="KR6-KM-Cm2" secondAttribute="trailing" constant="25" id="V3m-0j-vym"/>
                             <constraint firstItem="h7N-Jv-EEm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="Z2E-Ku-uD3"/>
+                            <constraint firstItem="dbI-ev-vwf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="aG6-rU-uac"/>
                             <constraint firstItem="FZk-VV-d8F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="cpe-sp-zsv"/>
                             <constraint firstAttribute="trailing" secondItem="h7N-Jv-EEm" secondAttribute="trailing" constant="25" id="fnR-fi-oiT"/>
                             <constraint firstItem="ClI-VO-KMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="jAu-Ud-qeL"/>
@@ -87,6 +119,7 @@
                         <outlet property="leftUp" destination="ClI-VO-KMa" id="GaY-OJ-smZ"/>
                         <outlet property="rightDown" destination="h7N-Jv-EEm" id="I2e-2a-umv"/>
                         <outlet property="rightUp" destination="KR6-KM-Cm2" id="5fv-dW-day"/>
+                        <outlet property="speak" destination="2lV-IO-EBq" id="8io-Ha-IHx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,8 +128,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cancel Filled-100" width="100" height="100"/>
         <image name="Circled Down 2 Filled-100" width="100" height="100"/>
         <image name="Circled Up 2 Filled-100" width="100" height="100"/>
+        <image name="Microphone Filled-100" width="100" height="100"/>
     </resources>
     <color key="tintColor" red="0.75686274509803919" green="0.26666666666666666" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
 </document>
