@@ -267,8 +267,8 @@ var options = {
 
 setInterval(function() {
   http.get(options, function(res) {
-    console.log(Math.random());
+    // console.log(Math.random());
   }).on('error', function(e) {
-    console.log("Got error: " + e.message);
+    // console.log("Got error: " + e.message);
   });
 }, 1000);

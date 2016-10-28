@@ -28,6 +28,7 @@ class MainController: UIViewController {
     
     // network service
     let service = GoPiGoService()
+    let speech = SpeechService()
     
     // gravity
     let motionManager = CMMotionManager()    

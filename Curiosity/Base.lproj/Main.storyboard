@@ -92,7 +92,7 @@
                                 <state key="normal" title="Button" image="Microphone Filled-100"/>
                                 <connections>
                                     <action selector="controlButtonChanged:" destination="BYZ-38-t0r" eventType="touchDown" id="aFD-x7-148"/>
-                                    <action selector="speaking:" destination="BYZ-38-t0r" eventType="touchDown" id="L3n-m2-cQ4"/>
+                                    <action selector="speaking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZaU-Pg-FuJ"/>
                                 </connections>
                             </button>
                         </subviews>
